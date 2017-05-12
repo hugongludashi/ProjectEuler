@@ -1,0 +1,1 @@
+# Code practise for ProjectEuler
