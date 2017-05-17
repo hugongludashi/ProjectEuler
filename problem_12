@@ -1,0 +1,29 @@
+function tri_num(n){
+	var sum = 0;
+	for (var i=1; i<n+1;i++){
+		sum+=i;
+    }
+	return sum;
+}
+
+function num_factor(n){
+	var a =[];
+	for (var i =1; i<n+1; i++){
+		if ((n%i)===0){
+			a.push(i);
+		}
+    }
+	return a.sort(function(a,b){
+		return a-b;
+	}).length;
+}
+function first_tri(n){
+	var b = new Array;
+	for (var i=1; num_factor(tri_num(i))<=n;i++){
+		if (num_factor(tri_num(i))===501){
+			return tri_num(i);
+		}
+	}
+}
+
+console.log(first_tri(501));
